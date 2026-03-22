@@ -25,37 +25,37 @@ const solutions = [
 export default function Home() {
   return (
     <main className="landing">
-      <section className="fold hero">
-        <div className="media" aria-label="Foto principal de Beatriz" />
-        <div className="content">
+      <section className="fold fold-hero">
+        <div className="hero-content">
+          <p className="kicker">Ativação estratégica de comunicação</p>
           <h1>
             Ative seu ativo criativo
             <br />
             e transforme sua comunicação em posicionamento
           </h1>
           <p>
-            Para empreendedoras, empresárias e líderes que sabem que têm ideias — mas ainda não
-            transformaram isso em algo sólido.
+            Para empreendedoras, empresárias e líderes que sabem que têm ideias — mas ainda
+            não transformaram isso em algo sólido.
           </p>
-          <p>👉 Seu DNA criativo é o seu maior ativo</p>
+          <p className="highlight">👉 Seu DNA criativo é o seu maior ativo</p>
           <button>Ativar meu DNA criativo</button>
         </div>
+        <div className="hero-visual" aria-label="Foto principal de Beatriz" />
       </section>
 
-      <section className="fold centered">
+      <section className="fold fold-break">
         <h2>O problema não é falta de ideia</h2>
-        <p>Você não precisa de mais conteúdo.</p>
-        <p>Nem de mais estratégia solta.</p>
-        <p>Você precisa de direção.</p>
+        <p>Você não precisa de mais conteúdo. Nem de mais estratégia solta.</p>
+        <p className="highlight">Você precisa de direção.</p>
         <p>
           Porque ideias sem estrutura não constroem posicionamento. E comunicação sem clareza
           não sustenta negócio.
         </p>
       </section>
 
-      <section className="fold about">
-        <div className="media tall" aria-label="Foto lifestyle e autoridade" />
-        <div className="content">
+      <section className="fold fold-about">
+        <div className="about-visual" aria-label="Foto lifestyle e autoridade" />
+        <div>
           <h2>
             Eu não ensino criatividade
             <br />
@@ -70,60 +70,75 @@ export default function Home() {
             Hoje, atuo como Diretora Executiva de Operações na DTL Group, empresa internacional
             com base em Portugal.
           </p>
-          <p>Ao longo da minha trajetória, eu percebi um padrão:</p>
-          <p>Empreendedoras e líderes com potencial… mas com a comunicação desalinhada.</p>
-          <p>Ideias boas… mal executadas.</p>
-          <p>👉 o problema nunca foi falta de criatividade foi falta de direção criativa</p>
-          <p>Hoje, atuo no desenvolvimento estratégico da comunicação de empresárias e líderes.</p>
-          <p>Porque no final: não é sobre ter ideias é sobre saber o que fazer com elas</p>
+          <p>
+            Ao longo da minha trajetória, eu percebi um padrão: empreendedoras e líderes com
+            potencial… mas com a comunicação desalinhada. Ideias boas… mal executadas.
+          </p>
+          <p className="highlight">
+            👉 o problema nunca foi falta de criatividade<br />foi falta de direção criativa
+          </p>
+          <p>
+            Hoje, atuo no desenvolvimento estratégico da comunicação de empresárias e líderes.
+          </p>
+          <p>
+            Porque no final: não é sobre ter ideias, é sobre saber o que fazer com elas.
+          </p>
         </div>
       </section>
 
-      <section className="fold centered">
-        <h2>Criatividade não é dom é ativo</h2>
+      <section className="fold fold-concept">
+        <h2>
+          Criatividade não é dom
+          <br />é ativo
+        </h2>
         <p>Um ativo que, quando ativado:</p>
         <ul>
-          <li>• organiza seu pensamento</li>
-          <li>• direciona sua comunicação</li>
-          <li>• fortalece seu posicionamento</li>
+          <li>organiza seu pensamento</li>
+          <li>direciona sua comunicação</li>
+          <li>fortalece seu posicionamento</li>
         </ul>
-        <p>👉 Seu DNA criativo é o seu maior ativo</p>
+        <p className="highlight">👉 Seu DNA criativo é o seu maior ativo</p>
       </section>
 
-      <section className="fold centered">
+      <section className="fold fold-turn">
         <h2>Seu maior ativo não é o que você faz</h2>
         <p>é como você cria</p>
       </section>
 
-      <section className="fold ai">
-        <div className="content">
-          <h2>IA Memorável (em breve)</h2>
-          <p>Você não precisa de mais uma IA genérica. Você precisa de direção.</p>
+      <section className="fold fold-ai">
+        <div>
+          <p className="kicker">IA Memorável (em breve)</p>
+          <h2>Você não precisa de mais uma IA genérica. Você precisa de direção.</h2>
           <p>
             A IA Memorável é uma plataforma com agentes especializados que funcionam como
             extensão do meu cérebro estratégico.
           </p>
           <ul>
-            <li>• organiza ideias</li>
-            <li>• estrutura comunicação</li>
-            <li>• transforma pensamento em conteúdo</li>
+            <li>organiza ideias</li>
+            <li>estrutura comunicação</li>
+            <li>transforma pensamento em conteúdo</li>
           </ul>
-          <p>👉 com clareza e intenção</p>
+          <p className="highlight">👉 com clareza e intenção</p>
           <button>Entrar para lista de espera</button>
         </div>
-        <div className="media ai-media" aria-label="Elemento visual tecnológico / IA" />
+        <div className="ai-visual" aria-label="Elemento visual tecnológico de IA" />
       </section>
 
-      <section className="fold">
+      <section className="fold fold-solutions">
         <h2>Soluções para transformar sua comunicação em posicionamento e resultado</h2>
-        <p>Você não precisa de mais conteúdo.</p>
-        <p>Você precisa de estrutura, direção e execução.</p>
+        <p>
+          Você não precisa de mais conteúdo.
+          <br />
+          Você precisa de estrutura, direção e execução.
+        </p>
         <div className="cards-grid">
           {solutions.map((solution, index) => (
             <article className="solution-card" key={solution.name}>
-              <div className="solution-media" aria-hidden="true">{`0${index + 1}`}</div>
+              <div className="solution-image" aria-hidden="true">
+                <span>{`0${index + 1}`}</span>
+              </div>
               <h3>{solution.name}</h3>
-              <p>{solution.subtitle}</p>
+              <h4>{solution.subtitle}</h4>
               <p>{solution.description}</p>
               <button>{solution.cta}</button>
             </article>
@@ -131,39 +146,45 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="fold centered">
+      <section className="fold fold-community">
         <h2>The Creative Club</h2>
-        <p>Um espaço para mulheres que decidiram parar de travar e começar a criar com consistência.</p>
+        <p>
+          Um espaço para mulheres que decidiram parar de travar e começar a criar com
+          consistência.
+        </p>
         <ul>
-          <li>• troca estratégica</li>
-          <li>• direcionamento real</li>
-          <li>• ativação contínua</li>
+          <li>troca estratégica</li>
+          <li>direcionamento real</li>
+          <li>ativação contínua</li>
         </ul>
         <button>Entrar para a comunidade</button>
       </section>
 
-      <section className="fold centered">
+      <section className="fold fold-method">
         <h2>Método Ativo Criativo (em breve)</h2>
         <p>Sistema que estrutura:</p>
         <ul>
-          <li>• ativação</li>
-          <li>• clareza</li>
-          <li>• expressão</li>
-          <li>• materialização</li>
+          <li>ativação</li>
+          <li>clareza</li>
+          <li>expressão</li>
+          <li>materialização</li>
         </ul>
       </section>
 
-      <section className="fold centered">
+      <section className="fold fold-conversion">
         <h2>Diga adeus ao bloqueio criativo</h2>
-        <p>Pare de ter ideias que não saem do papel e comunicação que não representa seu nível.</p>
-        <p>👉 você não precisa criar mais você precisa criar com direção</p>
+        <p>
+          Pare de ter ideias que não saem do papel e comunicação que não representa seu nível.
+        </p>
+        <p className="highlight">
+          👉 você não precisa criar mais<br />você precisa criar com direção
+        </p>
       </section>
 
-      <section className="fold centered">
+      <section className="fold fold-final-cta">
         <h2>
           Seu DNA criativo já existe
-          <br />
-          Só precisa ser ativado
+          <br />Só precisa ser ativado
         </h2>
         <button>Começar minha ativação</button>
       </section>
@@ -180,10 +201,10 @@ export default function Home() {
           <p>WhatsApp</p>
           <p>Suporte</p>
         </div>
-        <p>
+        <p className="signature">
           Eu transformo ideias soltas
           <br />
-          em comunicação, posicionamento e
+          em comunicação, posicionamento e estratégia.
         </p>
       </footer>
     </main>
